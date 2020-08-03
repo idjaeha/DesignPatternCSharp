@@ -14,7 +14,7 @@ namespace ConsoleApp1.DesignPattern
         private static IPattern pattern;
         public static void Main(String[] args)
         {
-            pattern = new TemplateDeformation();
+            pattern = new State();
             pattern.Start();
         }
     }
