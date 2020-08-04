@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using DesignPatternCSharp.Patterns;
 using DesignPatternCSharp.Patterns.AdapterPattern;
+using DesignPatternCSharp.Patterns.ObserverPattern;
 using DesignPatternCSharp.Patterns.ProxyPattern;
 
 namespace DesignPatternCSharp
@@ -12,7 +13,7 @@ namespace DesignPatternCSharp
         private static IPattern pattern;
         public static void Main(String[] args)
         {
-            pattern = new Adapter();
+            pattern = new Observer();
             pattern.Start();
         }
     }
