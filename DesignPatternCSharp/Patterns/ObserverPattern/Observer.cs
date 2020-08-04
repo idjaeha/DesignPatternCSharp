@@ -11,6 +11,14 @@ namespace DesignPatternCSharp.Patterns.ObserverPattern
     class Observer : IPattern
     {
         private bool isRunning = false;
+        private InputChecker inputChecker;
+
+        public Observer()
+        {
+            inputChecker = new InputChecker();
+            inputChecker.Add(new InputConsoleSender());
+        }
+
         public void Start()
         {
             isRunning = true;
@@ -23,7 +31,7 @@ namespace DesignPatternCSharp.Patterns.ObserverPattern
                         isRunning = false;
                         break;
                     default:
-                        Console.WriteLine("{0}를 입력하셨습니다.", keyInfo.Key);
+                        inputChecker.NotifyInput(keyInfo);
                         break;
                 }
             }
