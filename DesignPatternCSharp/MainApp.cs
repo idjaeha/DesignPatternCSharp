@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using DesignPatternCSharp.Patterns;
+using DesignPatternCSharp.Patterns.AdapterPattern;
 using DesignPatternCSharp.Patterns.ProxyPattern;
 
 namespace DesignPatternCSharp
@@ -11,7 +12,7 @@ namespace DesignPatternCSharp
         private static IPattern pattern;
         public static void Main(String[] args)
         {
-            pattern = new Proxy();
+            pattern = new Adapter();
             pattern.Start();
         }
     }
