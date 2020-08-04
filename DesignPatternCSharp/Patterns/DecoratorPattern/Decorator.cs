@@ -1,10 +1,8 @@
-﻿using DesignPatternCSharp.Patterns;
-using DesignPatternCSharp.Patterns.DecoratorPattern;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp1.DesignPattern.DecoratorPattern
+namespace DesignPatternCSharp.Patterns.DecoratorPattern
 {
     class Decorator : IPattern
     {

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ConsoleApp1.DesignPattern.DecoratorPattern;
 using DesignPatternCSharp.Patterns;
 using DesignPatternCSharp.Patterns.ProxyPattern;
 
-namespace ConsoleApp1.DesignPattern
+namespace DesignPatternCSharp
 {
     class MainApp
     {
