@@ -4,23 +4,25 @@ namespace DesignPatternCSharp.Patterns.MediatorPattern
 {
     public abstract class ItemSenderMediator
     {
-        protected List<Item> items;
-        protected List<User> users;
-        protected ItemSenderMediator()
+        protected readonly UserList userList;
+        protected readonly ItemList itemList;
+        protected Sender sender;
+        protected ItemSenderMediator(ItemList itemList, UserList userList)
         {
-            items = new List<Item>();
-            users = new List<User>();
+            this.itemList = itemList;
+            this.userList = userList;
+            sender = new Sender();
         }
         public abstract void SendItem();
 
         public void AddItem(Item item)
         {
-            items.Add(item);
+            itemList.Add(item);
         }
 
         public void AddUser(User user)
         {
-            users.Add(user);
+            userList.Add(user);
         }
     }
 }

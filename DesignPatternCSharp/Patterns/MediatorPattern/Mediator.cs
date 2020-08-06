@@ -4,25 +4,25 @@ namespace DesignPatternCSharp.Patterns.MediatorPattern
     {
         public void Start()
         {
-            // ItemSenderMediator itemSender = new RandomSender();
-            ItemSenderMediator itemSender = new SequentialSender();
-            itemSender.AddItem(new Item("활"));
-            itemSender.AddItem(new Item("검"));
-            itemSender.AddItem(new Item("총"));
-            itemSender.AddItem(new Item("창"));
-            itemSender.AddItem(new Item("도끼"));
+            //ItemSenderMediator itemMediator = new SequentialMediator(new ItemList(), new UserList());
+            ItemSenderMediator itemMediator = new RandomMediator(new ItemList(), new UserList());
+            itemMediator.AddItem(new Item("활"));
+            itemMediator.AddItem(new Item("검"));
+            itemMediator.AddItem(new Item("총"));
+            itemMediator.AddItem(new Item("창"));
+            itemMediator.AddItem(new Item("도끼"));
 
-            itemSender.AddUser(new User("User1"));
-            itemSender.AddUser(new User("User2"));
-            itemSender.AddUser(new User("User3"));
-            itemSender.AddUser(new User("User4"));
-            itemSender.AddUser(new User("User5"));
+            itemMediator.AddUser(new User("User1"));
+            itemMediator.AddUser(new User("User2"));
+            itemMediator.AddUser(new User("User3"));
+            itemMediator.AddUser(new User("User4"));
+            itemMediator.AddUser(new User("User5"));
 
-            itemSender.SendItem();
-            itemSender.SendItem();
-            itemSender.SendItem();
-            itemSender.SendItem();
-            itemSender.SendItem();
+            itemMediator.SendItem();
+            itemMediator.SendItem();
+            itemMediator.SendItem();
+            itemMediator.SendItem();
+            itemMediator.SendItem();
         }
     }
 }
